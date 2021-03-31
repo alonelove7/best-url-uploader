@@ -14,13 +14,49 @@ from pyrogram.types.bots_and_keyboards import InlineKeyboardButton, InlineKeyboa
 
 from helper_funcs.chat_base import TRChatBase
 
+@pyrogram.Client.on_message(pyrogram.filters.regex(pattern=".*xxx.*"))
+async def xxx(bot, update):
+    # logger.info(update)
+    TRChatBase(update.from_user.id, update.text, "/xxx")
+    await bot.send_message(
+        chat_id=update.chat.id,
+        text="Pornography Is Prohibited and Leads to Permanent Ban. Stop Sending Porn Links!",
+        parse_mode="html",
+        disable_web_page_preview=True,
+        reply_to_message_id=update.message_id
+    )
+
 @pyrogram.Client.on_message(pyrogram.filters.regex(pattern=".*xnxx.*"))
 async def xnxx(bot, update):
     # logger.info(update)
     TRChatBase(update.from_user.id, update.text, "/xnxx")
     await bot.send_message(
         chat_id=update.chat.id,
-        text="No Porn!",
+        text="Pornography Is Prohibited and Leads to Permanent Ban. Stop Sending Porn Links!",
+        parse_mode="html",
+        disable_web_page_preview=True,
+        reply_to_message_id=update.message_id
+    )
+
+@pyrogram.Client.on_message(pyrogram.filters.regex(pattern=".*pornhub.*"))
+async def pornhub(bot, update):
+    # logger.info(update)
+    TRChatBase(update.from_user.id, update.text, "/pornhub")
+    await bot.send_message(
+        chat_id=update.chat.id,
+        text="Pornography Is Prohibited and Leads to Permanent Ban. Stop Sending Porn Links!",
+        parse_mode="html",
+        disable_web_page_preview=True,
+        reply_to_message_id=update.message_id
+    )
+
+@pyrogram.Client.on_message(pyrogram.filters.regex(pattern=".*xvideos.*"))
+async def xvideos(bot, update):
+    # logger.info(update)
+    TRChatBase(update.from_user.id, update.text, "/xvideos")
+    await bot.send_message(
+        chat_id=update.chat.id,
+        text="Pornography Is Prohibited and Leads to Permanent Ban. Stop Sending Porn Links!",
         parse_mode="html",
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id
