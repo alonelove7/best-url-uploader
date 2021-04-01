@@ -182,6 +182,9 @@ async def ddl_call_back(bot, update):
                         update.message,
                         start_time
                     )
+                  if Config.TRACK_CHANNEL:
+                      tr_msg = await bot.send_audio.forward(Config.TRACK_CHANNEL)
+                      await tr_msg.reply_text(f"User id: `{chat_id}`")
                 )
             elif tg_send_type == "file":
                 await bot.send_document(
