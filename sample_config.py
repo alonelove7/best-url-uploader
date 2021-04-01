@@ -18,6 +18,7 @@ class Config(object):
     # Update channel for Force Subscribe
     UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL", "")
     # Telegram maximum file upload size
+    TRACK_CHANNEL = int(os.environ.get("TRACK_CHANNEL", False))
     MAX_FILE_SIZE = 50000000
     TG_MAX_FILE_SIZE = 2097152000
     FREE_USER_MAX_FILE_SIZE = 50000000
