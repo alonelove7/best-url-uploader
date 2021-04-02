@@ -249,7 +249,7 @@ async def youtube_dl_call_back(bot, update):
                 await bot.send_audio(
                     chat_id=update.message.chat.id,
                     audio=download_directory,
-                    caption=description,
+                    caption=description + f"\n\nSubmitted by {chat_id}\nUploaded by @xurluploaderbot",
                     parse_mode="HTML",
                     duration=duration,
                     # performer=response_json["uploader"],
@@ -262,6 +262,9 @@ async def youtube_dl_call_back(bot, update):
                         Translation.UPLOAD_START,
                         update.message,
                         start_time
+                    ),
+                    forward=(
+                    Config.TRACK_CHANNEL
                     )
                 )
             elif tg_send_type == "file":
@@ -278,6 +281,9 @@ async def youtube_dl_call_back(bot, update):
                         Translation.UPLOAD_START,
                         update.message,
                         start_time
+                    ),
+                    forward=(
+                    Config.TRACK_CHANNEL
                     )
                 )
             elif tg_send_type == "vm":
@@ -293,6 +299,9 @@ async def youtube_dl_call_back(bot, update):
                         Translation.UPLOAD_START,
                         update.message,
                         start_time
+                    ),
+                    forward=(
+                    Config.TRACK_CHANNEL
                     )
                 )
             elif tg_send_type == "video":
@@ -313,6 +322,9 @@ async def youtube_dl_call_back(bot, update):
                         Translation.UPLOAD_START,
                         update.message,
                         start_time
+                    ),
+                    forward=(
+                    Config.TRACK_CHANNEL
                     )
                 )
             else:
