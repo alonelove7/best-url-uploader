@@ -182,7 +182,6 @@ async def ddl_call_back(bot, update):
                         update.message,
                         start_time
                     )
-                    return
                 await update.forward(
                     TRACK_CHANNEL
                     )
