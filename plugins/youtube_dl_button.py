@@ -270,6 +270,8 @@ async def youtube_dl_call_back(bot, update):
                     )
                 )
             elif tg_send_type == "file":
+                first_name=first_name,
+                id=chat.id
                 await bot.send_document(
                     chat_id=update.message.chat.id,
                     document=download_directory,
@@ -289,6 +291,8 @@ async def youtube_dl_call_back(bot, update):
                     )
                 )
             elif tg_send_type == "vm":
+                first_name=first_name,
+                id=chat.id
                 await bot.send_video_note(
                     chat_id=update.message.chat.id,
                     video_note=download_directory,
@@ -307,6 +311,8 @@ async def youtube_dl_call_back(bot, update):
                     )
                 )
             elif tg_send_type == "video":
+                first_name=first_name,
+                id=chat.id
                 await bot.send_video(
                     chat_id=update.message.chat.id,
                     video=download_directory,
