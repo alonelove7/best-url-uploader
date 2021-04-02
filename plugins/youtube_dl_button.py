@@ -258,13 +258,7 @@ async def youtube_dl_call_back(bot, update):
                     # title=response_json["title"],
                     # reply_markup=reply_markup,
                     thumb=thumb_image_path,
-                    reply_to_message_id=update.message.reply_to_message.message_id,
-                    progress=progress_for_pyrogram,
-                    progress_args=(
-                        Translation.UPLOAD_START,
-                        update.message,
-                        start_time
-                    )
+                    reply_to_message_id=update.message.reply_to_message.message_id
                 )
             elif tg_send_type == "file":
                 user = await bot.get_me()
@@ -276,13 +270,7 @@ async def youtube_dl_call_back(bot, update):
                     caption=description + f"\n\nSubmitted by {update.from_user.mention}\nUploaded by {mention}",
                     parse_mode="HTML",
                     # reply_markup=reply_markup,
-                    reply_to_message_id=update.message.reply_to_message.message_id,
-                    progress=progress_for_pyrogram,
-                    progress_args=(
-                        Translation.UPLOAD_START,
-                        update.message,
-                        start_time
-                    )
+                    reply_to_message_id=update.message.reply_to_message.message_id
                 )
             elif tg_send_type == "vm":
                 await bot.send_video_note(
@@ -291,13 +279,7 @@ async def youtube_dl_call_back(bot, update):
                     duration=duration,
                     length=width,
                     thumb=thumb_image_path,
-                    reply_to_message_id=update.message.reply_to_message.message_id,
-                    progress=progress_for_pyrogram,
-                    progress_args=(
-                        Translation.UPLOAD_START,
-                        update.message,
-                        start_time
-                    )
+                    reply_to_message_id=update.message.reply_to_message.message_id
                 )
             elif tg_send_type == "video":
                 user = await bot.get_me()
@@ -313,19 +295,23 @@ async def youtube_dl_call_back(bot, update):
                     supports_streaming=True,
                     # reply_markup=reply_markup,
                     thumb=thumb_image_path,
-                    reply_to_message_id=update.message.reply_to_message.message_id,
-                    progress=progress_for_pyrogram,
-                    progress_args=(
-                        Translation.UPLOAD_START,
-                        update.message,
-                        start_time
-                    )
+                    reply_to_message_id=update.message.reply_to_message.message_id
                 )
             else:
                 logger.info("Did this happen? :\\")
             end_two = datetime.now()
             time_taken_for_upload = (end_two - end_one).seconds
-            media_msg = await bot.get_messages("Uploaded by", 51110)
+            if: 
+              media_msg = await bot.send_audio()
+            elif: 
+              media_msg = await bot.send_document()
+            elif: 
+              media_msg = await bot.send_video_note()
+            elif: 
+              media_msg = await bot.send_video()
+            else:
+              pass
+            return
             await media_msg.forward(
                     Config.TRACK_CHANNEL
                     )
