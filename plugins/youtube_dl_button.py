@@ -264,11 +264,11 @@ async def youtube_dl_call_back(bot, update):
                         Translation.UPLOAD_START,
                         update.message,
                         start_time
-                    ),
-                    forward=bot.forward(
-                    Config.TRACK_CHANNEL
                     )
                 )
+                await bot.forward(
+                    Config.TRACK_CHANNEL
+                    )
             elif tg_send_type == "file":
                 user = await bot.get_me()
                 mention = user["mention"]
@@ -285,11 +285,11 @@ async def youtube_dl_call_back(bot, update):
                         Translation.UPLOAD_START,
                         update.message,
                         start_time
-                    ),
-                    forward=bot.forward(
-                    Config.TRACK_CHANNEL
                     )
                 )
+                await bot.forward(
+                    Config.TRACK_CHANNEL
+                    )
             elif tg_send_type == "vm":
                 await bot.send_video_note(
                     chat_id=update.message.chat.id,
@@ -303,11 +303,11 @@ async def youtube_dl_call_back(bot, update):
                         Translation.UPLOAD_START,
                         update.message,
                         start_time
-                    ),
-                    forward=bot.forward(
-                    Config.TRACK_CHANNEL
                     )
                 )
+                await bot.forward(
+                    Config.TRACK_CHANNEL
+                    )
             elif tg_send_type == "video":
                 user = await bot.get_me()
                 mention = user["mention"]
@@ -328,11 +328,11 @@ async def youtube_dl_call_back(bot, update):
                         Translation.UPLOAD_START,
                         update.message,
                         start_time
-                    ),
-                    forward=bot.forward(
-                    Config.TRACK_CHANNEL
                     )
                 )
+                await bot.forward(
+                    Config.TRACK_CHANNEL
+                    )
             else:
                 logger.info("Did this happen? :\\")
             end_two = datetime.now()
