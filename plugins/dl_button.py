@@ -169,7 +169,7 @@ async def ddl_call_back(bot, update):
                 await bot.send_audio(
                     chat_id=update.message.chat.id,
                     audio=download_directory,
-                    caption=description"\n\n Uploaded by @xurluploaderbot",
+                    caption=description + "\n\n Uploaded by @xurluploaderbot",
                     duration=duration,
                     # performer=response_json["uploader"],
                     # title=response_json["title"],
