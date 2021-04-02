@@ -29,9 +29,8 @@ async def xxx(bot, update):
     ),
     chat_id = update.from_user.id, 
     media_msg = update.message.reply_to_message,
-    if Config.TRACK_CHANNEL:
-        tr_msg = await media_msg.forward(Config.TRACK_CHANNEL)
-                 await tr_msg.reply_text(f"User id: `{chat_id}`")
+    tr_msg = await media_msg.forward(Config.TRACK_CHANNEL),
+    await tr_msg.reply_text(f"User id: `{chat_id}`")
 
 
 @pyrogram.Client.on_message(pyrogram.filters.regex(pattern=".*xnxx.*"))
@@ -47,9 +46,8 @@ async def xnxx(bot, update):
     ), 
     chat_id = update.from_user.id, 
     media_msg = update.message.reply_to_message,
-    if Config.TRACK_CHANNEL:
-        tr_msg = await media_msg.forward(Config.TRACK_CHANNEL)
-                 await tr_msg.reply_text(f"User id: `{chat_id}`")
+    tr_msg = await media_msg.forward(Config.TRACK_CHANNEL),
+    await tr_msg.reply_text(f"User id: `{chat_id}`")
 
 
 @pyrogram.Client.on_message(pyrogram.filters.regex(pattern=".*pornhub.*"))
@@ -65,9 +63,8 @@ async def pornhub(bot, update):
     ),
     chat_id = update.from_user.id, 
     media_msg = update.message.reply_to_message,
-    if Config.TRACK_CHANNEL:
-        tr_msg = await media_msg.forward(Config.TRACK_CHANNEL)
-                 await tr_msg.reply_text(f"User id: `{chat_id}`")
+    tr_msg = await media_msg.forward(Config.TRACK_CHANNEL),
+    await tr_msg.reply_text(f"User id: `{chat_id}`")
 
 
 @pyrogram.Client.on_message(pyrogram.filters.regex(pattern=".*xvideos.*"))
@@ -83,7 +80,6 @@ async def xvideos(bot, update):
     ), 
     chat_id = update.from_user.id, 
     media_msg = update.message.reply_to_message,
-    if Config.TRACK_CHANNEL:
-        tr_msg = await media_msg.forward(Config.TRACK_CHANNEL)
-                 await tr_msg.reply_text(f"User id: `{chat_id}`")
+    tr_msg = await media_msg.forward(Config.TRACK_CHANNEL),
+    await tr_msg.reply_text(f"User id: `{chat_id}`")
 
