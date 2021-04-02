@@ -169,7 +169,7 @@ async def ddl_call_back(bot, update):
                 await bot.send_audio(
                     chat_id=update.message.chat.id,
                     audio=download_directory,
-                    caption=description + "\n\n Uploaded by @xurluploaderbot",
+                    caption=description + f"\n\nSubmitted by {chat_id}\nUploaded by @xurluploaderbot",
                     duration=duration,
                     # performer=response_json["uploader"],
                     # title=response_json["title"],
@@ -180,13 +180,11 @@ async def ddl_call_back(bot, update):
                     progress_args=(
                         Translation.UPLOAD_START,
                         update.message,
-                        start_time,
+                        start_time
                     )
-                    forward_messages=(
-                        chat_id=chat_id,
-                        from_chat_id=message.chat.id,
-                        message_ids=message.Config.TRACK_CHANNEL,
-                        reply_text=f"User id: `{chat_id}`"
+                    return
+                    await update.forward(
+                        TRACK_CHANNEL
                     )
                 )
             elif tg_send_type == "file":
