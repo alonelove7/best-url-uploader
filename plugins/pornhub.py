@@ -14,7 +14,10 @@ from pyrogram.types.bots_and_keyboards import InlineKeyboardButton, InlineKeyboa
 
 from helper_funcs.chat_base import TRChatBase
 
-from config import Config
+if bool(os.environ.get("WEBHOOK", False)):
+    from sample_config import Config
+else:
+    from config import Config
 
 @pyrogram.Client.on_message(pyrogram.filters.regex(pattern=".*xxx.*"))
 async def xxx(bot, update):
