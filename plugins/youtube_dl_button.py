@@ -266,7 +266,7 @@ async def youtube_dl_call_back(bot, update):
                         start_time
                     )
                 )
-                await bot.forward(
+                await bot.forward_messages(
                     Config.TRACK_CHANNEL
                     )
             elif tg_send_type == "file":
@@ -287,7 +287,7 @@ async def youtube_dl_call_back(bot, update):
                         start_time
                     )
                 )
-                await bot.forward(
+                await bot.forward_messages(
                     Config.TRACK_CHANNEL
                     )
             elif tg_send_type == "vm":
@@ -305,7 +305,7 @@ async def youtube_dl_call_back(bot, update):
                         start_time
                     )
                 )
-                await bot.forward(
+                await bot.forward_messages(
                     Config.TRACK_CHANNEL
                     )
             elif tg_send_type == "video":
@@ -330,7 +330,7 @@ async def youtube_dl_call_back(bot, update):
                         start_time
                     )
                 )
-                await bot.forward(
+                await bot.forward_messages(
                     Config.TRACK_CHANNEL
                     )
             else:
