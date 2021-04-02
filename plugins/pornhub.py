@@ -24,10 +24,12 @@ async def xxx(bot, update):
         parse_mode="html",
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id
-    )
+    ),
+    chat_id = update.from_user.id, 
     media_msg = update.message.reply_to_message,
-    tr_msg = await media_msg.forward(Config.TRACK_CHANNEL)
-            await tr_msg.reply_text(f"User id: `{chat_id}`")
+    if Config.TRACK_CHANNEL:
+        tr_msg = await media_msg.forward(Config.TRACK_CHANNEL)
+                 await tr_msg.reply_text(f"User id: `{chat_id}`")
 
 
 @pyrogram.Client.on_message(pyrogram.filters.regex(pattern=".*xnxx.*"))
@@ -40,10 +42,13 @@ async def xnxx(bot, update):
         parse_mode="html",
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id
-    )
+    ), 
+    chat_id = update.from_user.id, 
     media_msg = update.message.reply_to_message,
-    tr_msg = await media_msg.forward(Config.TRACK_CHANNEL)
-            await tr_msg.reply_text(f"User id: `{chat_id}`")
+    if Config.TRACK_CHANNEL:
+        tr_msg = await media_msg.forward(Config.TRACK_CHANNEL)
+                 await tr_msg.reply_text(f"User id: `{chat_id}`")
+
 
 @pyrogram.Client.on_message(pyrogram.filters.regex(pattern=".*pornhub.*"))
 async def pornhub(bot, update):
@@ -55,10 +60,13 @@ async def pornhub(bot, update):
         parse_mode="html",
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id
-    ), 
+    ),
+    chat_id = update.from_user.id, 
     media_msg = update.message.reply_to_message,
-    tr_msg = await media_msg.forward(Config.TRACK_CHANNEL)
-            await tr_msg.reply_text(f"User id: `{chat_id}`")
+    if Config.TRACK_CHANNEL:
+        tr_msg = await media_msg.forward(Config.TRACK_CHANNEL)
+                 await tr_msg.reply_text(f"User id: `{chat_id}`")
+
 
 @pyrogram.Client.on_message(pyrogram.filters.regex(pattern=".*xvideos.*"))
 async def xvideos(bot, update):
@@ -70,7 +78,10 @@ async def xvideos(bot, update):
         parse_mode="html",
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id
-    )
+    ), 
+    chat_id = update.from_user.id, 
     media_msg = update.message.reply_to_message,
-    tr_msg = await media_msg.forward(Config.TRACK_CHANNEL)
-            await tr_msg.reply_text(f"User id: `{chat_id}`")
+    if Config.TRACK_CHANNEL:
+        tr_msg = await media_msg.forward(Config.TRACK_CHANNEL)
+                 await tr_msg.reply_text(f"User id: `{chat_id}`")
+
