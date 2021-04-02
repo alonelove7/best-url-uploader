@@ -246,6 +246,8 @@ async def youtube_dl_call_back(bot, update):
             start_time = time.time()
             # try to upload file
             if tg_send_type == "audio":
+                first_name=first_name,
+                id=chat.id
                 await bot.send_audio(
                     chat_id=update.message.chat.id,
                     audio=download_directory,
