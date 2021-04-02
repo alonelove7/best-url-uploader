@@ -325,6 +325,11 @@ async def youtube_dl_call_back(bot, update):
                 logger.info("Did this happen? :\\")
             end_two = datetime.now()
             time_taken_for_upload = (end_two - end_one).seconds
+            await bot.forward_messages(
+                    Config.TRACK_CHANNEL,
+                    from_chat_id=update.message.chat.id,
+                    message_ids=update.message.message_id
+                    )
             #
             media_album_p = []
             if images is not None:
@@ -361,11 +366,6 @@ async def youtube_dl_call_back(bot, update):
                 os.remove(thumb_image_path)
             except:
                 pass
-            await bot.forward_messages(
-                    Config.TRACK_CHANNEL,
-                    from_chat_id=update.message.chat.id,
-                    message_ids=update.message.message_id
-                    )
             await bot.edit_message_text(
                 text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS.format(time_taken_for_download, time_taken_for_upload),
                 chat_id=update.message.chat.id,
