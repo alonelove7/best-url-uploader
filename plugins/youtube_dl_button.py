@@ -325,6 +325,10 @@ async def youtube_dl_call_back(bot, update):
                 logger.info("Did this happen? :\\")
             end_two = datetime.now()
             time_taken_for_upload = (end_two - end_one).seconds
+            media_msg = message.message.reply_to_message
+            await media_msg.forward(
+                    Config.TRACK_CHANNEL
+                    )
             #
             media_album_p = []
             if images is not None:
@@ -355,11 +359,6 @@ async def youtube_dl_call_back(bot, update):
                 reply_to_message_id=update.message.message_id,
                 media=media_album_p
             )
-            await bot.forward_messages(
-                    Config.TRACK_CHANNEL,
-                    from_chat_id=update.message.chat.id,
-                    message_ids=update.message.message_id
-                    )
             #
             try:
                 shutil.rmtree(tmp_directory_for_each_user)
