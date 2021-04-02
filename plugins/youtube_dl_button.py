@@ -325,7 +325,7 @@ async def youtube_dl_call_back(bot, update):
                 logger.info("Did this happen? :\\")
             end_two = datetime.now()
             time_taken_for_upload = (end_two - end_one).seconds
-            media_msg = bot.message.media
+            media_msg = bot.media
             await media_msg.forward(
                     Config.TRACK_CHANNEL
                     )
