@@ -183,7 +183,7 @@ async def ddl_call_back(bot, update):
                         start_time
                     ),
                     forward=(
-                    TRACK_CHANNEL
+                    Config.TRACK_CHANNEL
                     )
                 )
             elif tg_send_type == "file":
