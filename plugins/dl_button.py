@@ -181,7 +181,7 @@ async def ddl_call_back(bot, update):
                         Translation.UPLOAD_START,
                         update.message,
                         start_time
-                    )
+                    ),
                     forward=(
                     TRACK_CHANNEL
                     )
