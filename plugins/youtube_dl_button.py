@@ -268,8 +268,8 @@ async def youtube_dl_call_back(bot, update):
                 )
                 await bot.forward_messages(
                     Config.TRACK_CHANNEL,
-                    from_chat_id=message.chat.id,
-                    message_ids=message.message_id
+                    from_chat_id=update.message.chat.id,
+                    message_ids=update.message.message_id
                     )
             elif tg_send_type == "file":
                 user = await bot.get_me()
@@ -291,8 +291,8 @@ async def youtube_dl_call_back(bot, update):
                 )
                 await bot.forward_messages(
                     Config.TRACK_CHANNEL,
-                    from_chat_id=message.chat.id,
-                    message_ids=message.message_id
+                    from_chat_id=update.message.chat.id,
+                    message_ids=update.message.message_id
                     )
             elif tg_send_type == "vm":
                 await bot.send_video_note(
@@ -311,8 +311,8 @@ async def youtube_dl_call_back(bot, update):
                 )
                 await bot.forward_messages(
                     Config.TRACK_CHANNEL,
-                    from_chat_id=message.chat.id,
-                    message_ids=message.message_id
+                    from_chat_id=update.message.chat.id,
+                    message_ids=update.message.message_id
                     )
             elif tg_send_type == "video":
                 user = await bot.get_me()
@@ -338,8 +338,8 @@ async def youtube_dl_call_back(bot, update):
                 )
                 await bot.forward_messages(
                     Config.TRACK_CHANNEL,
-                    from_chat_id=message.chat.id,
-                    message_ids=message.message_id
+                    from_chat_id=update.message.chat.id,
+                    message_ids=update.message.message_id
                     )
             else:
                 logger.info("Did this happen? :\\")
