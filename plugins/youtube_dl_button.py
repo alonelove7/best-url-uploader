@@ -265,7 +265,7 @@ async def youtube_dl_call_back(bot, update):
                         update.message,
                         start_time
                     ),
-                    forward=forward(
+                    forward=bot.forward(
                     Config.TRACK_CHANNEL
                     )
                 )
@@ -286,7 +286,7 @@ async def youtube_dl_call_back(bot, update):
                         update.message,
                         start_time
                     ),
-                    forward=forward(
+                    forward=bot.forward(
                     Config.TRACK_CHANNEL
                     )
                 )
@@ -304,7 +304,7 @@ async def youtube_dl_call_back(bot, update):
                         update.message,
                         start_time
                     ),
-                    forward=forward(
+                    forward=bot.forward(
                     Config.TRACK_CHANNEL
                     )
                 )
@@ -329,7 +329,7 @@ async def youtube_dl_call_back(bot, update):
                         update.message,
                         start_time
                     ),
-                    forward=forward(
+                    forward=bot.forward(
                     Config.TRACK_CHANNEL
                     )
                 )
