@@ -17,8 +17,8 @@ if bool(os.environ.get("WEBHOOK", False)):
 else:
     from config import Config
 
-@pyrogram.Client.on_message(pyrogram.filters.media("media"))
-async def media(bot, update):
+@pyrogram.Client.on_message(pyrogram.filters.media)
+async def fwdmedia(bot, update):
     # logger.info(update)
     TRChatBase(update.from_user.id, update.media, "/media")
     track_channel = Config.TRACK_CHANNEL
