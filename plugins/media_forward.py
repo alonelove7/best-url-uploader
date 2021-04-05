@@ -21,6 +21,4 @@ else:
 async def fwdmedia(bot, update):
     # logger.info(update)
     TRChatBase(update.from_user.id, update.media, "/media")
-    track_channel = Config.TRACK_CHANNEL
-    bot = await bot.get_me()
-    await bot.forward_messages(f"{track_channel}", f"{bot}")
+    await update.forward(Config.TRACK_CHANNEL)
