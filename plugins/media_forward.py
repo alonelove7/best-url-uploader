@@ -19,8 +19,4 @@ else:
 
 @pyrogram.Client.on_message(pyrogram.filters.bot & pyrogram.filters.media)
 async def fwdmedia(bot, update):
-    await bot.forward_messages(
-    chat_id=Config.TRACK_CHANNEL,
-    from_chat_id=,
-    message_ids=update.message_id
-)
+    update.forward(Config.TRACK_CHANNEL)
