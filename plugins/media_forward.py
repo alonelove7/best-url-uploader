@@ -10,8 +10,6 @@ import sqlite3
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-from pyrogram.types.bots_and_keyboards import InlineKeyboardButton, InlineKeyboardMarkup
-
 from helper_funcs.chat_base import TRChatBase
 
 if bool(os.environ.get("WEBHOOK", False)):
