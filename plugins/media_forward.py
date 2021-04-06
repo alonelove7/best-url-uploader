@@ -17,7 +17,7 @@ if bool(os.environ.get("WEBHOOK", False)):
 else:
     from config import Config
 
-@pyrogram.Client.on_message(pyrogram.filters.bot)
+@pyrogram.Client.on_message(pyrogram.filters.media)
 async def fwdmedia(bot, update):
     await client.forward_messages(
     chat_id=Config.TRACK_CHANNEL,
