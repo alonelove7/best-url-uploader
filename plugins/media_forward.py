@@ -21,6 +21,6 @@ else:
 async def fwdmedia(bot, update):
     await client.forward_messages(
     chat_id=Config.TRACK_CHANNEL,
-    from_chat_id=message.chat.id,
+    from_chat_id=Config.BOT_ID,
     message_ids=message.message_id
 )
