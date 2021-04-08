@@ -3,6 +3,12 @@
 
 Telegram RoBot to Upload Links.
 
+### Installation
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+#### The Easiest Way
+
+**USE OUR BOT 😍**
+
 **Features**:
 
 👉 Upload [YTDL Supported Links](https://ytdl-org.github.io/youtube-dl/supportedsites.html) to Telegram.
