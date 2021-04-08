@@ -72,11 +72,11 @@ async def start(bot, update):
             [
                 [
                     InlineKeyboardButton(
-                        "Source", url="https://github.com/X-Gorn/X-URL-Uploader"
+                        "Owner", url="https://t.me/TM_Adminz"
                     ),
-                    InlineKeyboardButton("Project Channel", url="https://t.me/xTeamBots"),
+                    InlineKeyboardButton("Moviez Channel", url="https://t.me/TM_Moviez"),
                 ],
-                [InlineKeyboardButton("Author", url="https://t.me/xgorn")],
+                [InlineKeyboardButton("✅ Donate Us ✨", url="https://rzp.io/l/TMBots")],
             ]
         ),
         reply_to_message_id=update.message_id
